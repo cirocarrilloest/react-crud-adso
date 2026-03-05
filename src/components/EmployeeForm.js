@@ -69,12 +69,14 @@ function EmployeeForm({ employeeToEdit, onSaveComplete }) {
         placeholder="Nombre"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)} // Agrega el campo de nombre al formulario
+        required
       />
       <input
         type="text"
         placeholder="Apellido"
         value={apellido}
         onChange={(e) => setApellido(e.target.value)} // Agrega el campo de apellido al formulario
+        required
       />
       <input
         type="text"
@@ -84,12 +86,14 @@ function EmployeeForm({ employeeToEdit, onSaveComplete }) {
         maxLength="10" // Limita a 10 caracteres
         pattern="[0-9]{10}" // Solo permite números y máximo 10 dígitos
         title="maximo 10 numeros" // Agrega un mensaje de validación para el patrón
+        required
       />
       <input
         type="email"
         placeholder="Correo Electrónico"
         value={correo}
         onChange={(e) => setCorreo(e.target.value)} // Agrega el campo de correo electrónico al formulario
+        required
       />
       <input
         type="password"

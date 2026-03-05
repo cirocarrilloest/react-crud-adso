@@ -24,6 +24,10 @@ body {
   --form-box: #333333;
   --input-box: #e0dfdf;
   --input1-box: #888888;
+  --button1-delete: #dc3545;
+  --button2-delete: #b02a37;
+  --button1-edit: #ffc107;
+  --button2-edit: #e0a800;
 }
 /* Estilos para el contenedor principal */
 .container-main {
@@ -81,7 +85,7 @@ input {
   margin: 12px 15px;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--input-box);
   width: 200px;
   box-sizing: border-box;
 }
@@ -112,23 +116,23 @@ button {
 
 /* Editar */
 .btn-edit {
-  background-color: #ffc107;
-  color: black;
+  background-color: var(--button1-edit);
+  color: var(--dark-shadow);
 }
 
 .btn-edit:hover {
-  background-color: #e0a800;
+  background-color: var(--button2-edit);
   transform: scale(1.05);
 }
 
 /* Eliminar */
 .btn-delete {
-  background-color: #dc3545;
-  color: white;
+  background-color: var(--button1-delete);
+  color: var(--white-color);
 }
 
 .btn-delete:hover {
-  background-color: #b02a37;
+  background-color: var(--button2-delete);
   transform: scale(1.05);
 }
 
@@ -136,7 +140,7 @@ button {
 
 button[type="submit"] {
   background: linear-gradient(135deg, #0d6edf, #0a58ca);
-  color: white;
+  color: var(--white-color);
 }
 
 button[type="submit"]:hover {
@@ -154,8 +158,8 @@ table {
 }
 /* Estilos para el encabezado de la tabla */
 thead {
-  background-color: #0d6edf;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 /* Estilos para el cuerpo de la tabla */
 tbody tr:last-child td:first-child {

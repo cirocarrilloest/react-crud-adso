@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Estilos globales */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to right, black, blue);
+  margin: 0;
+  padding: 30px;
   min-height: 100vh;
+}
+
+:root {
+  --primary-color: #0d6edf;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  /* color */
+  --dark-shadow: #00000080;
+  --white-color: #ffffff;
+  --fondo-color: #3533cd;
+  --fondo1-color: #007bff;
+  --fondo2-color: #5e5cff;
+  --dark1-shadow: #272822;
+  --form-box: #333333;
+  --input-box: #e0dfdf;
+  --input1-box: #888888;
+}
+/* Estilos para el contenedor principal */
+.container-main {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 30px;
+}
+/* Estilos para títulos y textos */
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--white-color) !important;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+/* Estilos para subtítulos */
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--white-color);
+}
+/* Estilos para el formulario */
+form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
   align-items: center;
+}
+
+/* Estilos para el formulario y la tabla */
+form,
+table {
+  background: var(--white-color);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+/* Efecto hover para el formulario y la tabla */
+form:hover,
+table:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+/* Alineación del botón de envío a la derecha */
+form button {
+  margin-left: auto;
+}
+
+/* Estilos para los campos de entrada */
+input {
+  margin: 12px 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  width: 200px;
+  box-sizing: border-box;
+}
+/* Efecto de enfoque para los campos de entrada */
+input:focus {
+  outline: none;
+  border-color: #0d6edf;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.15);
+}
+/* Botones generales */
+button {
+  margin: 6px;
+  padding: 10px 20px;
+  border-radius: 5px !important; /* MÁS redondeado */
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Contenedor de botones */
+.button-group {
+  display: flex;
+  gap: 18px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/* Editar */
+.btn-edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Eliminar */
+.btn-delete {
+  background-color: #dc3545;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-delete:hover {
+  background-color: #b02a37;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para el botón de principal*/
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #0d6edf, #0a58ca);
+  color: white;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0a58ca, #084298);
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+/* Estilos para el encabezado de la tabla */
+thead {
+  background-color: #0d6edf;
+  color: white;
+}
+/* Estilos para el cuerpo de la tabla */
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 14px;
+}
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 14px;
+}
+/* Estilos para las celdas del encabezado */
+thead tr:first-child th:first-child {
+  border-top-left-radius: 14px;
+}
+
+thead tr:first-child th:last-child {
+  border-top-right-radius: 14px;
+}
+
+/* Alineación de texto en celdas */
+th,
+td {
+  padding: 12px;
+}
+
+th.nombre,
+td.nombre,
+th.apellido,
+td.apellido,
+th.contrasenia,
+td.contrasenia {
+  text-align: center;
+}
+
+th.celular,
+td.celular,
+th.correo,
+td.correo {
+  text-align: center;
+}
+
+th.acciones,
+td.acciones {
+  text-align: center;
+}
+/* Efecto hover para filas de la tabla */
+tr:nth-child(even) {
+  background-color: #f2f4f8;
+}
+
+tr:hover {
+  background-color: #5d94f1;
+  transition: 0.2s;
+}
+
+/* Estilos para mensajes de vacio */
+p {
+  text-align: center;
+  color: #888888;
+  font-style: italic;
 }

@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%; /* Hace que la barra de navegación se quede fija en la parte superior de la página */
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: transparent;
+  box-shadow: 0 10px 20px #00000080;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1800px;
+}
+
+.navbar-logo {
+  font-size: 3rem;
+  font-family: "Rye", serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+.navbar-menu li a:hover {
+  background: #3533cd;
+  border: 2px solid #ffffff;
+}
